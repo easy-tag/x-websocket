@@ -1,2 +1,2 @@
 # x-websocket
-newly wrapped websocket webcomponent (temorarily) 
+newly wrapped websocket webcomponent
