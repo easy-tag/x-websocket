@@ -1,0 +1,59 @@
+<!doctype html>
+<!--
+@license
+feel free to use this component
+enjoy
+-->
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, minimum-scale=1.0, initial-scale=1.0, user-scalable=yes">
+  <title>x-websocket Demo</title>
+  <script src="../../webcomponentsjs/webcomponents-lite.js"></script>
+  <link rel="import" href="../x-websocket.html">
+</head>
+
+<body>
+
+  <h3>click and check the console
+    <h3>
+      <input id="beverage" value="Soda">
+      <button id="myBtn">Send message to websocket provider</button>
+      <x-websocket auto url="ws://echo.websocket.org"></x-websocket>
+
+      <h4>This is what i got back</h4>
+      <ul id="myList">
+        <!-- <li>Coffee</li>
+        <li>Tea</li> -->
+      </ul>
+
+      <script>
+        var xws = document.querySelector("x-websocket");
+
+
+        document.getElementById("myBtn").addEventListener("click", function() {
+          console.log("sent: Click-Text!");
+          // var inputdata = document.getElementById("beverage");
+          xws.send(document.getElementById("beverage").value);
+
+        });
+
+        xws.addEventListener("open", function(event) {
+          console.log("websocket connection open!");
+        });
+
+        xws.addEventListener("message", function(event) {
+          console.log("received:", event.detail.data);
+
+          var node = document.createElement("LI");
+          var textnode = document.createTextNode(event.detail.data);
+          node.appendChild(textnode);
+          document.getElementById("myList").appendChild(node);
+
+        });
+      </script>
+
+</body>
+
+</html>

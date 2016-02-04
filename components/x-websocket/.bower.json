@@ -1,0 +1,39 @@
+{
+  "name": "x-websocket",
+  "authors": [
+    "Elie Rotenberg <elie@rotenberg.io>",
+    "Jason White <jwhite@navinet.net>",
+    "Tobias Hutterer <tobias.hutterer@gmail.com>"
+  ],
+  "description": "WebComponent WebSocket wrapper.",
+  "keywords": [
+    "web-component",
+    "web-components",
+    "polymer",
+    "websockets"
+  ],
+  "main": "x-websocket.html",
+  "license": "MIT",
+  "homepage": "https://github.com/easy-tag/x-websocket/",
+  "ignore": [
+    "/.*",
+    "/test/"
+  ],
+  "dependencies": {
+    "polymer": "Polymer/polymer#^1.2.3"
+  },
+  "devDependencies": {
+    "iron-component-page": "PolymerElements/iron-component-page#^1.1.4",
+    "web-component-tester": "*"
+  },
+  "_release": "af0d8c7243",
+  "_resolution": {
+    "type": "branch",
+    "branch": "master",
+    "commit": "af0d8c724343b63e4bef4868ff7db5bd5562bd14"
+  },
+  "_source": "git://github.com/easy-tag/x-websocket.git",
+  "_target": "master",
+  "_originalSource": "easy-tag/x-websocket",
+  "_direct": true
+}
